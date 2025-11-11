@@ -81,7 +81,7 @@ install_dependencies() {
                 nsis
             ;;
 
-        "Arch Linux"|"Manjaro Linux")
+        "Arch Linux"|"Manjaro Linux"|"EndeavourOS)
             sudo pacman -Sy --noconfirm \
                 base-devel \
                 openssl \
