@@ -5,7 +5,7 @@
 ## 🚀 Быстрый старт
 
 ```bash
-git clone https://github.com/Trytonottry/sentinel_vault.git
+git clone https://github.com/Trytonottry/Sentinel_Vault.git
 cd sentinel_vault
 ./scripts/setup.sh
 make full
