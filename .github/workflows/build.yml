@@ -1,0 +1,77 @@
+name: Build & Release Sentinel-Vault
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    name: Build on Ubuntu (AppImage)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential python3 python3-pip cmake \
+                              fuse appstream desktop-file-utils \
+                              libfuse2 zsync libglib2.0-bin
+
+          # Если проект использует дополнительные Python-зависимости
+          [ -f requirements.txt ] && pip install -r requirements.txt || echo "No Python deps"
+
+      - name: Build project
+        run: |
+          echo "🏗️ Starting build..."
+          make clean || true
+          make -j$(nproc)
+          echo "✅ Build finished."
+
+      - name: Package as AppImage
+        run: |
+          echo "📦 Packaging AppImage..."
+          mkdir -p dist
+          # Если у тебя уже есть скрипт для AppImage:
+          if [ -f "scripts/make_appimage.sh" ]; then
+            bash scripts/make_appimage.sh
+          else
+            # Пример простейшей упаковки, если AppDir уже подготовлен
+            APPDIR=build/AppDir
+            OUTPUT=dist/SentinelVault-$(date +%Y%m%d).AppImage
+            chmod +x ./appimagetool
+            ./appimagetool "$APPDIR" "$OUTPUT"
+          fi
+          echo "✅ AppImage packaged."
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Sentinel-Vault-AppImage
+          path: dist/*.AppImage
+
+  release:
+    name: Upload to GitHub Release
+    needs: build-linux
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Sentinel-Vault-AppImage
+          path: dist/
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.AppImage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
