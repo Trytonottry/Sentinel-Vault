@@ -5,8 +5,10 @@
 ![Build Status](https://img.shields.io/github/actions/workflow/status/Trytonottry/Sentinel‑Vault/ci.yml?branch=main)
 ![Latest Release](https://img.shields.io/github/v/release/Trytonottry/Sentinel‑Vault)
 ![License](https://img.shields.io/badge/MIT-green?style=for-the-badge)
-![Languages](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)(https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
-![Platform](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)(https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Languages](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Languages](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+![Platform](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Platform](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![GitHub stars](https://img.shields.io/github/stars/Trytonottry/Sentinel‑Vault?style=social)
 
 > Высокозащищённое приложение с рекурсивным шифрованием, GUI, обфускацией, анти‑отладкой и самоуничтожением.
