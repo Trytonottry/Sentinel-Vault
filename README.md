@@ -1,5 +1,17 @@
 # 🛡️ Sentinel Vault — Система самозащиты данных
 
+# Sentinel‑Vault
+
+![Build Status](https://img.shields.io/github/actions/workflow/status/Trytonottry/Sentinel‑Vault/ci.yml?branch=main)
+![Latest Release](https://img.shields.io/github/v/release/Trytonottry/Sentinel‑Vault)
+![License](https://img.shields.io/github/license/Trytonottry/Sentinel‑Vault)
+![Languages](https://img.shields.io/github/languages/top/Trytonottry/Sentinel‑Vault)
+![Platform](https://img.shields.io/badge/platform‑Linux%20%7C%20Windows‑blue)
+![GitHub stars](https://img.shields.io/github/stars/Trytonottry/Sentinel‑Vault?style=social)
+
+> Высокозащищённое приложение с рекурсивным шифрованием, GUI, обфускацией, анти‑отладкой и самоуничтожением.
+
+
 Высокозащищённое приложение с рекурсивным шифрованием, GUI, обфускацией, анти-отладкой и самоуничтожением.
 
 ## 🚀 Быстрый старт
