@@ -7,7 +7,7 @@
 ```bash
 git clone https://github.com/Trytonottry/Sentinel-Vault.git
 cd sentinel_vault
-./scripts/setup.sh
+./c/scripts/setup.sh
 make full
 ./SentinelVault-x86_64.AppImage
 ```
