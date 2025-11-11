@@ -6,7 +6,7 @@
 ![Latest Release](https://img.shields.io/github/v/release/Trytonottry/Sentinel‑Vault)
 ![License](https://img.shields.io/github/license/Trytonottry/Sentinel‑Vault)
 ![Languages](https://img.shields.io/github/languages/top/Trytonottry/Sentinel‑Vault)
-![Platform](https://img.shields.io/badge/platform‑Linux%20%7C%20Windows‑blue)
+![Platform]([https://img.shields.io/badge/platform‑Linux%20%7C%20Windows‑blue](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black))
 ![GitHub stars](https://img.shields.io/github/stars/Trytonottry/Sentinel‑Vault?style=social)
 
 > Высокозащищённое приложение с рекурсивным шифрованием, GUI, обфускацией, анти‑отладкой и самоуничтожением.
